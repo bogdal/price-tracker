@@ -1,7 +1,7 @@
 import pymongo
 
 
-class MongoPipeline(object):
+class MongodbPipeline(object):
 
     collection_name = 'items'
 

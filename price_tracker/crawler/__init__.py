@@ -1,10 +1,12 @@
-from scrapy.crawler import CrawlerProcess
+import os
+os.environ.setdefault('SCRAPY_SETTINGS_MODULE', 'price_tracker.settings')
 
+from scrapy.crawler import CrawlerProcess
+from scrapy.utils.project import get_project_settings
 from price_tracker.crawler.spiders import CeneoSpider
-from price_tracker.settings import CRAWLER as crawler_settings
 
 
 def run_crawler():
-    process = CrawlerProcess(crawler_settings)
+    process = CrawlerProcess(get_project_settings())
     process.crawl(CeneoSpider)
     process.start()
