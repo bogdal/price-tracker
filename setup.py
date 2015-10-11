@@ -7,6 +7,7 @@ setup(
     author='Adam Bogdal',
     author_email='adam@bogdal.pl',
     url='https://github.com/bogdal/price-tracker',
+    license='BSD',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
