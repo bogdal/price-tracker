@@ -1,0 +1,11 @@
+mongodb:
+  image: mongo
+app:
+  build: .
+  environment:
+    - MONGO_URI=mongodb://mongodb/ceneo
+    - SPIDER_URLS_FILE=/app/spider_urls.txt.example
+  links:
+    - mongodb
+  volumes:
+    - .:/app
